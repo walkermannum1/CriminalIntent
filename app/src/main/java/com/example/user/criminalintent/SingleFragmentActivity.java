@@ -1,14 +1,19 @@
 package com.example.user.criminalintent;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 
-public class CrimeActivity extends FragmentActivity {
+/**
+ * Created by user on 2016/9/1.
+ */
+public abstract class SingleFragmentActivity extends FragmentActivity {
+
+    protected abstract Fragment createFragment();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
 
@@ -16,7 +21,7 @@ public class CrimeActivity extends FragmentActivity {
         Fragment fragment = fm.findFragmentById(R.id.fragment_container);
 
         if (fragment == null) {
-            fragment = new CrimeFragment();
+            fragment = createFragment();
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
     }
