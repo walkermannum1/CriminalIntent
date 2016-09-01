@@ -31,11 +31,11 @@ public class CrimeLab {
         }
     }
 
-    private List<Crime> getCrimes() {
+    public List<Crime> getCrimes() {
         return mCrimes;
     }
 
-    private Crime getCrime(UUID id) {
+    public Crime getCrime(UUID id) {
         for (Crime crime : mCrimes) {
             if (crime.getId().equals(id)) {
                 return crime;
