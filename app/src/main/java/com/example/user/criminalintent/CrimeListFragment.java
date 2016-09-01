@@ -1,6 +1,5 @@
 package com.example.user.criminalintent;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -82,7 +81,8 @@ public class CrimeListFragment extends Fragment {
         @Override
         public CrimeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
-            View view =layoutInflater.inflate(R.layout.list_item_crime, parent, false);
+            View view =layoutInflater.inflate(R.layout.list_item_crime, null, false);
+            //null to parent: make one line occupied the entire screen
             return new CrimeHolder(view);
         }
 

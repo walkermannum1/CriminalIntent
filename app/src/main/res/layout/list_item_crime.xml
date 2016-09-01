@@ -26,6 +26,5 @@
         android:text="Crime Date"
         android:layout_toLeftOf="@+id/list_item_crime_solved_check_box"
         android:id="@+id/list_item_crime_date_text_view"
-        android:textStyle="bold"
         android:layout_below="@+id/list_item_crime_title_text_view"/>
 </RelativeLayout>
