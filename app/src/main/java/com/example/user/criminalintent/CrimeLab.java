@@ -10,6 +10,7 @@ import java.util.UUID;
  * Created by user on 2016/9/1.
  */
 public class CrimeLab {
+
     private static CrimeLab sCrimeLab;
 
     private List<Crime> mCrimes;
