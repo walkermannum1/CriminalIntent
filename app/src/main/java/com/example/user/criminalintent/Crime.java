@@ -60,4 +60,7 @@ public class Crime {
     public void setDate(Date date) {
         mDate = date;
     }
+    public String getPhotoFilename() {
+        return "IMG_" + getId().toString() + ".jpg";
+    }
 }
